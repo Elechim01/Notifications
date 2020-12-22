@@ -23,30 +23,30 @@ struct ContentView: View {
                 Text(dumbData.notification.request.content.title)
                 Text(dumbData.notification.request.content.subtitle)
             }
-//            Button ("local Notification"){
-//
-//
-//
-//
-//                let content = UNMutableNotificationContent()
-//                                content.title = "Notification Tutorial"
-//                                content.subtitle = "from ioscreator.com"
-//                                content.body = " Notification triggered"
-//                                content.sound = UNNotificationSound.default
-//                let imageName = "applelogo"
-//                guard let imageURL = Bundle.main.url(forResource: imageName, withExtension: "png") else{return}
-//
-//                            let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
-//
-//                            content.attachments = [attachment]
-//
-//                            // 4.
-//                           let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-//                           let request = UNNotificationRequest(identifier: "notification.id.01", content: content, trigger: trigger)
-//
-//                           // 5.
-//                UNUserNotificationCenter.current().add(request)
-//            }
+            Button ("local Notification"){
+
+
+
+
+                let content = UNMutableNotificationContent()
+                                content.title = "Notification Tutorial"
+                                content.subtitle = "from ioscreator.com"
+                                content.body = " Notification triggered"
+                                content.sound = UNNotificationSound.default
+                let imageName = "applelogo"
+                guard let imageURL = Bundle.main.url(forResource: imageName, withExtension: "png") else{return}
+
+                            let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
+
+                            content.attachments = [attachment]
+
+                            // 4.
+                           let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                           let request = UNNotificationRequest(identifier: "notification.id.01", content: content, trigger: trigger)
+
+                           // 5.
+                UNUserNotificationCenter.current().add(request)
+            }
         }
     }
 }
